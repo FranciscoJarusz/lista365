@@ -4,7 +4,16 @@ const Recursos = () => {
     return (
         <div id="recursos" className="p-6 flex flex-col items-center justify-center mt-20">
             
-            <h1 className="text-6xl font-bold text-primario mb-12">Recursos</h1>
+            <div className="flex flex-col items-center justify-center gap-6">            
+            
+                <h1 className="text-6xl font-bold text-black"><span className="text-primario">Recursos</span> útiles</h1>
+
+                <div className="h-1 w-30 bg-gradient-to-r from-primario to-secundario rounded-xl"></div>
+
+                <p className="text-md text-gray-600 mb-12">Accedé a todos los recursos que hemos preparado para ayudarte en tu carrera.</p>
+            
+            </div>
+
             
             <div className="flex flex-col items-left justify-center max-w-3xl w-full mx-auto gap-12">
                 
