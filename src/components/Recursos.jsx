@@ -1,0 +1,37 @@
+import React from 'react';
+
+const Recursos = () => {
+    return (
+        <div id="recursos" className="p-6 flex flex-col items-center justify-center mt-20">
+            
+            <h1 className="text-6xl font-bold text-primario mb-12">Recursos</h1>
+            
+            <div className="flex flex-col items-left justify-center max-w-5xl w-full mx-auto gap-12">
+                
+                <div className="flex flex-col items-left gap-4 bg-gray-50 p-6 rounded-xl shadow-lg">
+
+                    <div className="flex items-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="28" height="28" className="text-primario">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                        </svg>
+                        <h2 className="text-2xl font-bold text-primario">Bibliografía digital</h2>
+                    </div>
+
+                    <p className="text-sm text-gray-600 text-wrap max-w-2xl">
+                        Accedé a una recopilación de libros y manuales usados en las materias de la carrera.
+                    </p>
+
+                    <a href="https://drive.google.com/drive/folders/1H6jQ2K5hPKi9ClLSg4SxSHSsfR4Nz3_8" target="_blank" className="flex items-center justify-center gradiente-boton rounded-full py-2 text-md text-white w-30">
+                        <span>Ver</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    );
+};
+
+export default Recursos;    

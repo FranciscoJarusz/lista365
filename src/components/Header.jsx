@@ -78,6 +78,13 @@ const Header = ({showNav = true }) => {
               className="text-white no-underline text-xl font-bold py-4 px-8 rounded-[25px] transition-all duration-300 text-center w-full max-w-[250px] relative overflow-hidden hover:bg-white/10 hover:-translate-y-0.5 before:content-[''] before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-white/10 before:transition-all before:duration-300 hover:before:left-0"
             >
               Integrantes
+            </a>            
+            <a 
+              href="#recursos" 
+              onClick={closeMenu}
+              className="text-white no-underline text-xl font-bold py-4 px-8 rounded-[25px] transition-all duration-300 text-center w-full max-w-[250px] relative overflow-hidden hover:bg-white/10 hover:-translate-y-0.5 before:content-[''] before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-white/10 before:transition-all before:duration-300 hover:before:left-0"
+            >
+              Recursos
             </a>
             <a 
               href="#preguntas-frecuentes" 
