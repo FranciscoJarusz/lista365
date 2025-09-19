@@ -12,7 +12,7 @@ const PreguntasFrecuentes = () => {
 
                     <input type="checkbox" id="pregunta1" className="hidden" />
 
-                    <label htmlFor="pregunta1" className="group w-full p-6 text-left flex gap-8 items-center transition-colors duration-300 cursor-pointer bg-white hover:bg-gradient-to-r hover:from-primario hover:to-secundario hover:text-white">
+                    <label htmlFor="pregunta1" className="group w-full p-6 text-left flex gap-8 items-center transition-colors duration-300 cursor-pointer bg-white hover:bg-gradient-to-br hover:from-primario hover:to-secundario hover:text-white">
                         
                         <span className="text-lg font-semibold text-black group-hover:text-white transition-colors duration-300">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolorpisici
@@ -36,7 +36,7 @@ const PreguntasFrecuentes = () => {
                     <div className="deslizar-abajo-content">
                         
                         <div className="p-6">
-                            <p className="text-gray-700">
+                            <p className="text-gray-600">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
                             </p>
                         

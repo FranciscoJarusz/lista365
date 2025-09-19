@@ -32,7 +32,7 @@ const Footer = () => {
 
                 <div className="flex items-center justify-center gap-6">
 
-                     <a href="https://www.instagram.com/lista365unlu/" target="_blank" className="bg-primario p-3 rounded-full hover:scale-110 transition-transform duration-300">
+                     <a href="https://www.instagram.com/lista365unlu/" target="_blank" className="gradiente-boton p-3 rounded-full">
                          <img 
                              src={instagramIcon} 
                              alt="Instagram" 
@@ -42,7 +42,7 @@ const Footer = () => {
                          />
                      </a>
 
-                     <a href="https://wa.me/541167545219" target="_blank" className="bg-primario p-3 rounded-full hover:scale-110 transition-transform duration-300">
+                     <a href="https://wa.me/541167545219" target="_blank" className="gradiente-boton p-3 rounded-full">
                          <img 
                              src={whatsappIcon} 
                              alt="WhatsApp" 
