@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primario: #fe5e2a;
+  --color-hover: #b94521;
+}
+
+:root {
+  --color-primario: #fe5e2a;
+  --color-hover: #b94521;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  scroll-padding-top: 160px;
+  scroll-behavior: smooth;
+}
+
+.animacion-underline {
+  position: relative;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.animacion-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primario);
+  transition: width 0.3s ease;
+}
+
+.animacion-underline:hover::after {
+  width: 100%;
+}
