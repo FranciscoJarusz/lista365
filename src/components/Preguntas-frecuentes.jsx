@@ -14,8 +14,8 @@ const PreguntasFrecuentes = () => {
 
                     <label htmlFor="pregunta1" className="group w-full p-6 text-left flex justify-between items-center transition-colors duration-300 cursor-pointer bg-gray-50 hover:bg-gradient-to-br hover:from-primario hover:to-secundario hover:text-white">
                         
-                        <span className="text-lg font-semibold text-black group-hover:text-white transition-colors duration-300">
-                            Inscripciones
+                        <span className="max-w-3xl text-lg font-semibold text-black group-hover:text-white transition-colors duration-300">
+                            ¿Qué diferencia hay entre el título de Enfermero/a Universitario/a y el de Licenciado/a en Enfermería?
                         </span>
                         <svg 
                             className="w-6 h-6 text-primario group-hover:text-white transition-colors duration-300" 
@@ -35,10 +35,11 @@ const PreguntasFrecuentes = () => {
                     
                     <div className="deslizar-abajo-content">
                         
-                        <div className="p-6">
-                            <p className="text-gray-600">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-                            </p>
+                        <div className="flex flex-col gap-6 p-6">
+                            
+                            <p className="text-gray-600 text-wrap max-w-4xl">El título intermedio de Enfermero/a Universitario/a se obtiene al aprobar el ciclo básico y habilita para ejercer la profesión. </p>
+                            
+                            <p className="text-gray-600 text-wrap max-w-4xl">El título de Licenciado/a en Enfermería se logra al completar todo el plan de estudios, incorporando mayor formación en gestión, investigación y docencia. </p>
                         
                         </div>
                     
@@ -53,7 +54,7 @@ const PreguntasFrecuentes = () => {
                     <label htmlFor="pregunta2" className="group w-full p-6 text-left flex justify-between items-center transition-colors duration-300 cursor-pointer bg-gray-50 hover:bg-gradient-to-br hover:from-primario hover:to-secundario hover:text-white">
                         
                         <span className="text-lg font-semibold text-black group-hover:text-white transition-colors duration-300">
-                            Preguntas
+                            ¿Qué requisitos debo cumplir para inscribirme en la carrera?
                         </span>
                         <svg 
                             className="w-6 h-6 text-primario group-hover:text-white transition-colors duration-300" 
@@ -73,19 +74,193 @@ const PreguntasFrecuentes = () => {
                     
                     <div className="deslizar-abajo-content">
                         
-                        <div className="p-6">
-                            <p className="text-gray-600">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-                            </p>
+                        <div className="flex flex-col gap-6 p-6">
+
+                            <p className="text-gray-600 text-wrap max-w-4xl">Se necesita: </p>
+
+                            <ul className="list-disc list-inside">
+                                
+                                <li className="text-gray-600 text-wrap max-w-4xl">Título secundario completo o, en su defecto, cumplir con el Art. 7 de la Ley 24.521 (mayores de 25 años con estudios previos). </li>
+                                
+                                <li className="text-gray-600 text-wrap max-w-4xl">Dos dosis de vacuna contra la Hepatitis B. </li>
+                                
+                                <li className="text-gray-600 text-wrap max-w-4xl">Refuerzo de vacuna antitetánica vigente (doble adultos o triple bacteriana). </li>
+                            
+                            </ul>
+
+                        </div>
+                    
+                    </div>
+
+                </div>
+
+                <div className="w-full bg-white rounded-lg shadow-md overflow-hidden deslizar-abajo">
+
+                    <input type="checkbox" id="pregunta3" className="hidden" />
+
+                    <label htmlFor="pregunta3" className="group w-full p-6 text-left flex justify-between items-center transition-colors duration-300 cursor-pointer bg-gray-50 hover:bg-gradient-to-br hover:from-primario hover:to-secundario hover:text-white">
+                        
+                        <span className="text-lg font-semibold text-black group-hover:text-white transition-colors duration-300">
+                            ¿Cómo puedo acceder a la biblioteca y al préstamo de notebooks?
+                        </span>
+                        <svg 
+                            className="w-6 h-6 text-primario group-hover:text-white transition-colors duration-300" 
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                        >
+                            <path 
+                                strokeLinecap="round" 
+                                strokeLinejoin="round" 
+                                strokeWidth="2" 
+                                d="M19 9l-7 7-7-7"
+                            />
+                        </svg>
+
+                    </label>
+                    
+                    <div className="deslizar-abajo-content">
+                        
+                        <div className="flex flex-col gap-6 p-6">
+                            
+                            <p className="text-gray-600 text-wrap max-w-4xl">La biblioteca del Centro Regional Chivilcoy funciona de lunes a viernes de 9 a 20:30 hs. </p>
+                            
+                            <p className="text-gray-600 text-wrap max-w-4xl">Además, podés solicitar notebooks de uso gratuito dentro del predio universitario. </p>
                         
                         </div>
                     
                     </div>
+
+                </div>
+
+                <div className="w-full bg-white rounded-lg shadow-md overflow-hidden deslizar-abajo">
+
+                    <input type="checkbox" id="pregunta4" className="hidden" />
+
+                    <label htmlFor="pregunta4" className="group w-full p-6 text-left flex justify-between items-center transition-colors duration-300 cursor-pointer bg-gray-50 hover:bg-gradient-to-br hover:from-primario hover:to-secundario hover:text-white">
+                        
+                        <span className="text-lg font-semibold text-black group-hover:text-white transition-colors duration-300">
+                            ¿Qué apoyo brinda la Secretaría de Bienestar Universitario y Asuntos Estudiantiles?
+                        </span>
+                        <svg 
+                            className="w-6 h-6 text-primario group-hover:text-white transition-colors duration-300" 
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                        >
+                            <path 
+                                strokeLinecap="round" 
+                                strokeLinejoin="round" 
+                                strokeWidth="2" 
+                                d="M19 9l-7 7-7-7"
+                            />
+                        </svg>
+
+                    </label>
+                    
+                    <div className="deslizar-abajo-content">
+                        
+                        <div className="flex flex-col gap-6 p-6">
+
+                            <p className="text-gray-600 text-wrap max-w-4xl">Ofrece servicios como becas, pasantías, deportes, apoyo a la salud estudiantil y asesoramiento sobre empleabilidad. </p>
+                           
+                            <p className="text-gray-600 text-wrap max-w-4xl">Es un recurso clave para mejorar la experiencia universitaria. </p>
+                        
+                        </div>
+                    
+                    </div>
+
+                </div>
+
+                <div className="w-full bg-white rounded-lg shadow-md overflow-hidden deslizar-abajo">
+
+                    <input type="checkbox" id="pregunta5" className="hidden" />
+
+                    <label htmlFor="pregunta5" className="group w-full p-6 text-left flex justify-between items-center transition-colors duration-300 cursor-pointer bg-gray-50 hover:bg-gradient-to-br hover:from-primario hover:to-secundario hover:text-white">
+                        
+                        <span className="text-lg font-semibold text-black group-hover:text-white transition-colors duration-300">
+                            ¿Cómo es la modalidad de cursado en el Centro Regional Chivilcoy?
+                        </span>
+                        <svg 
+                            className="w-6 h-6 text-primario group-hover:text-white transition-colors duration-300" 
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                        >
+                            <path 
+                                strokeLinecap="round" 
+                                strokeLinejoin="round" 
+                                strokeWidth="2" 
+                                d="M19 9l-7 7-7-7"
+                            />
+                        </svg>
+
+                    </label>
+
+                    <div className="deslizar-abajo-content">
+                        
+                        <div className="flex flex-col gap-6 p-6">
+
+                            <p className="text-gray-600 text-wrap max-w-4xl">En Chivilcoy la modalidad es presencial y teórico-práctica, con clases en aula y prácticas en instituciones de salud de la región.</p>
+                            
+                            <p className="text-gray-600 text-wrap max-w-4xl">Los tres primeros años se cursan de lunes a viernes de 14 a 22 hs, mientras que en 4º y 5º año se mantienen los mismos horarios vespertinos, facilitando la organización para quienes trabajan o viajan.</p>
+                        
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div className="w-full bg-white rounded-lg shadow-md overflow-hidden deslizar-abajo">
+
+                    <input type="checkbox" id="pregunta6" className="hidden" />
+
+                    <label htmlFor="pregunta6" className="group w-full p-6 text-left flex justify-between items-center transition-colors duration-300 cursor-pointer bg-gray-50 hover:bg-gradient-to-br hover:from-primario hover:to-secundario hover:text-white">
+                        
+                        <span className="text-lg font-semibold text-black group-hover:text-white transition-colors duration-300">
+                            ¿Cómo está organizado el plan de estudios de Enfermería?
+                        </span>
+                        <svg 
+                            className="w-6 h-6 text-primario group-hover:text-white transition-colors duration-300" 
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                        >
+                            <path 
+                                strokeLinecap="round" 
+                                strokeLinejoin="round" 
+                                strokeWidth="2" 
+                                d="M19 9l-7 7-7-7"
+                            />
+                        </svg>
+
+                    </label>
+
+                    <div className="deslizar-abajo-content">
+                        
+                        <div className="flex flex-col gap-6 p-6">
+
+                            <p className="text-gray-600 text-wrap max-w-4xl">El plan vigente (52.02) tiene una duración total de 4072 horas reloj. </p>
+                            
+                            <p className="text-gray-600 text-wrap max-w-4xl">Está dividido en dos etapas: </p>
+
+                            <ul className="list-disc list-inside">
+                                
+                                <li className="text-gray-600 text-wrap max-w-4xl">Enfermero/a Universitario/a (título intermedio): 2444 horas, incluye 26 materias cuatrimestrales, prácticas integradas y competencias básicas en informática. </li>
+                                
+                                <li className="text-gray-600 text-wrap max-w-4xl">Licenciado/a en Enfermería (título final): 1628 horas adicionales, con 9 materias cuatrimestrales, 3 anuales, práctica integrada y un Trabajo Final de Graduación. </li>
+                            
+                            </ul>
+                        
+                        </div>
+                        
+                    </div>
+
                 </div>
 
             </div>
 
-        </div>
+        </div>  
     );
 };
 
