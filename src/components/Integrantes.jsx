@@ -7,7 +7,7 @@ const Integrantes = () => {
         <div id="integrantes" className="p-6 flex flex-col items-center justify-center mt-20 mx-auto gap-6">
             <h1 className="text-6xl font-bold text-black"><span className="text-primario">Conocé</span> a nuestros <span className="text-primario">integrantes</span></h1>
 
-            <div className="h-2 w-100 bg-gradient-to-r from-primario to-secundario rounded-xl"></div>
+            <div className="h-1 w-70 bg-gradient-to-r from-primario to-secundario rounded-xl"></div>
 
             <h2 className="text-3xl font-bold text-primario">Comisión Directiva</h2>
 
