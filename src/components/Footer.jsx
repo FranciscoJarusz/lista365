@@ -4,13 +4,13 @@ import whatsappIcon from '../assets/whatsapp.svg';
 
 const Footer = () => {
     return (
-        <footer className="bg-black p-6 flex flex-col items-center justify-center mt-20">
+        <footer className="bg-primario p-6 flex flex-col items-center justify-center mt-20">
             
             <div className="flex flex-col items-center justify-center gap-8">
-                <p className="text-xl text-primario font-bold text-wrap max-w-2xl text-center">Centro de Estudiantes de la Licenciatura en Enfermería - Lista 365</p>
+                <p className="text-xl text-white font-bold text-wrap max-w-2xl text-center">Centro de Estudiantes de la Licenciatura en Enfermería - Lista 365</p>
                 
                 <div className="flex items-center justify-center gap-2">
-                    <a href="mailto:lista365unlu@gmail.com" className="animacion-underline flex items-center justify-center gap-2 text-lg text-white font-bold text-wrap max-w-2xl text-center">
+                    <a href="mailto:lista365unlu@gmail.com" className="flex items-center justify-center gap-2 text-lg text-white font-bold text-wrap max-w-2xl text-center">
                     <svg 
                         xmlns="http://www.w3.org/2000/svg" 
                         width="24" 
@@ -32,7 +32,7 @@ const Footer = () => {
 
                 <div className="flex items-center justify-center gap-6">
 
-                     <a href="https://www.instagram.com/lista365unlu/" target="_blank" className="gradiente-boton p-3 rounded-full">
+                     <a href="https://www.instagram.com/lista365unlu/" target="_blank" className="gradiente-boton-white p-3 rounded-full">
                          <img 
                              src={instagramIcon} 
                              alt="Instagram" 
@@ -42,7 +42,7 @@ const Footer = () => {
                          />
                      </a>
 
-                     <a href="https://wa.me/541167545219" target="_blank" className="gradiente-boton p-3 rounded-full">
+                     <a href="https://wa.me/541167545219" target="_blank" className="gradiente-boton-white p-3 rounded-full">
                          <img 
                              src={whatsappIcon} 
                              alt="WhatsApp" 
