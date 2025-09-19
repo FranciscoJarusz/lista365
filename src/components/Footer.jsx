@@ -10,7 +10,7 @@ const Footer = () => {
                 <p className="text-xl text-white font-bold text-wrap max-w-2xl text-center">Centro de Estudiantes de la Licenciatura en Enfermería - Lista 365</p>
                 
                 <div className="flex items-center justify-center gap-2">
-                    <a href="mailto:lista365unlu@gmail.com" className="flex items-center justify-center gap-2 text-lg text-white font-bold text-wrap max-w-2xl text-center">
+                    <a href="mailto:lista365unlu@gmail.com" className="animacion-underline flex items-center justify-center gap-2 text-lg text-white font-bold text-wrap max-w-2xl text-center">
                     <svg 
                         xmlns="http://www.w3.org/2000/svg" 
                         width="24" 
