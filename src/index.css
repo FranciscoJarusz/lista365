@@ -2,11 +2,13 @@
 
 @theme {
   --color-primario: #fe5e2a;
+  --color-secundario: #ff8860;
   --color-hover: #b94521;
 }
 
 :root {
   --color-primario: #fe5e2a;
+  --color-secundario: #ff8860;
   --color-hover: #b94521;
 }
 
@@ -38,4 +40,20 @@ html {
 
 .animacion-underline:hover::after {
   width: 100%;
+}
+
+.border-bottom-gradiente {
+  position: relative;
+}
+
+.border-bottom-gradiente::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, var(--color-primario), var(--color-secundario));
+  border-radius: 0 0 0.75rem 0.75rem;
+  z-index: 1;
 }

@@ -13,7 +13,7 @@ const Header = ({showNav = true }) => {
           </div>
 
           {showNav && (
-            <nav className="flex gap-8">
+            <nav className="flex gap-12">
               <a href="#nosotros" className="animacion-underline text-black text-lg font-bold">
                 Nosotros
               </a>
