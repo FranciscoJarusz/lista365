@@ -3,7 +3,7 @@ import logo from '../assets/logo365.png';
 
 const Header = ({showNav = true }) => {
   return (
-    <header className="bg-white shadow-lg fixed top-0 left-0 right-0">
+    <header className="bg-white shadow-lg fixed top-0 left-0 right-0 z-999">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center py-3">
           <div>
@@ -19,6 +19,9 @@ const Header = ({showNav = true }) => {
               </a>
               <a href="#integrantes" className="animacion-underline text-black text-lg font-bold">
                 Integrantes
+              </a>
+              <a href="#preguntas-frecuentes" className="animacion-underline text-black text-lg font-bold">
+                FAQ
               </a>
             </nav>
           )}

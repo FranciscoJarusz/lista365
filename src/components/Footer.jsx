@@ -7,7 +7,7 @@ const Footer = () => {
         <footer className="bg-black p-6 flex flex-col items-center justify-center">
             
             <div className="flex flex-col items-center justify-center gap-8">
-                <p className="text-lg text-primario font-bold text-wrap max-w-2xl text-center">Centro de Estudiantes de la Licenciatura en Enfermería - Lista 365</p>
+                <p className="text-xl text-primario font-bold text-wrap max-w-2xl text-center">Centro de Estudiantes de la Licenciatura en Enfermería - Lista 365</p>
                 
                 <div className="flex items-center justify-center gap-2">
                     <a href="mailto:lista365unlu@gmail.com" className="animacion-underline flex items-center justify-center gap-2 text-lg text-white font-bold text-wrap max-w-2xl text-center">

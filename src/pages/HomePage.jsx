@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import QuienesSomos from '../components/Quienes-somos';
 import Integrantes from '../components/Integrantes';
+import PreguntasFrecuentes from '../components/Preguntas-frecuentes';
 import Footer from '../components/Footer';
 
 const HomePage = () => {
@@ -13,6 +14,7 @@ const HomePage = () => {
       <main className="flex-grow">
         <QuienesSomos />
         <Integrantes />
+        <PreguntasFrecuentes />
       </main>
 
       <Footer />
