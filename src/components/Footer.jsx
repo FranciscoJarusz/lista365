@@ -4,7 +4,7 @@ import whatsappIcon from '../assets/whatsapp.svg';
 
 const Footer = () => {
     return (
-        <footer className="bg-black p-6 flex flex-col items-center justify-center">
+        <footer className="bg-black p-6 flex flex-col items-center justify-center mt-20">
             
             <div className="flex flex-col items-center justify-center gap-8">
                 <p className="text-xl text-primario font-bold text-wrap max-w-2xl text-center">Centro de Estudiantes de la Licenciatura en Enfermería - Lista 365</p>

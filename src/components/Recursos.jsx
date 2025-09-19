@@ -6,7 +6,7 @@ const Recursos = () => {
             
             <h1 className="text-6xl font-bold text-primario mb-12">Recursos</h1>
             
-            <div className="flex flex-col items-left justify-center max-w-5xl w-full mx-auto gap-12">
+            <div className="flex flex-col items-left justify-center max-w-3xl w-full mx-auto gap-12">
                 
                 <div className="flex flex-col items-left gap-4 bg-gray-50 p-6 rounded-xl shadow-lg">
 
