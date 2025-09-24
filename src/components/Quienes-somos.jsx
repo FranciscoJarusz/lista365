@@ -4,13 +4,13 @@ const QuienesSomos = () => {
     return (
         <div id="nosotros" className="p-6 flex flex-col items-center justify-center mt-40">
             
-            <h1 className="text-6xl font-bold text-black mb-12"><span className="text-primario">¿</span>Quiénes somos<span className="text-primario">?</span></h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-black mb-12"><span className="text-primario">¿</span>Quiénes somos<span className="text-primario">?</span></h1>
             
             <div className="bg-gray-50 shadow-lg p-6 rounded-lg flex flex-col items-center justify-center max-w-3xl mx-auto gap-12">
                 
                 <div className="flex flex-col items-center justify-center gap-12">
                     
-                    <p className="text-lg text-gray-600 text-wrap max-w-2xl">
+                    <p className="text-sm md:text-lg text-gray-600 text-wrap max-w-2xl">
                         Somos el Centro de Estudiantes de la Licenciatura en Enfermería (Lista 365) del Centro Regional Chivilcoy.
                         
                         Nos enorgullece ser una entidad, activa y pionera en esta iniciativa dentro de nuestra sede.
