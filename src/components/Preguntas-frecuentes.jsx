@@ -258,6 +258,49 @@ const PreguntasFrecuentes = () => {
 
                 </div>
 
+                <div className="w-full bg-white rounded-lg shadow-md overflow-hidden deslizar-abajo">
+
+                    <input type="checkbox" id="pregunta7" className="hidden" />
+
+                    <label htmlFor="pregunta7" className="group w-full p-6 text-left flex justify-between items-center transition-colors duration-300 cursor-pointer bg-gray-50 hover:bg-gradient-to-br hover:from-primario hover:to-secundario hover:text-white">
+                        
+                        <span className="text-base font-semibold text-black group-hover:text-white transition-colors duration-300">
+                            ¿Cómo me comunico con el Centro de Estudiantes Lista 365?
+                        </span>
+                        <svg 
+                            className="w-6 h-6 text-primario group-hover:text-white transition-colors duration-300" 
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                        >
+                            <path 
+                                strokeLinecap="round" 
+                                strokeLinejoin="round" 
+                                strokeWidth="2" 
+                                d="M19 9l-7 7-7-7"
+                            />
+                        </svg>
+
+                    </label>
+
+                    <div className="deslizar-abajo-content">
+                        
+                        <div className="flex flex-col gap-6 p-6">
+
+                            <p className="text-gray-600 text-wrap max-w-4xl text-sm md:text-base">Podes contactarnos por:</p>  
+
+                            <p className="text-gray-600 text-wrap max-w-4xl text-sm md:text-base font-bold">📧 Mail: <a href="mailto:lista365unlu@gmail.com" className="text-primario">lista365unlu@gmail.com</a></p>
+
+                            <p className="text-gray-600 text-wrap max-w-4xl text-sm md:text-base font-bold">📱 Instagram: <a href="https://www.instagram.com/lista365unlu/" target="_blank" className="text-primario">lista365unlu</a></p>
+                           
+                            <p className="text-gray-600 text-wrap max-w-4xl text-sm md:text-base font-bold">📞 Secretaria: <a href="https://wa.me/541167545219" target="_blank" className="text-primario">+54 11 6754-5219</a></p>
+                        
+                        </div>
+                        
+                    </div>
+
+                </div>
+
             </div>
 
         </div>  
