@@ -4,6 +4,7 @@ import linkedinIcon from '../assets/linkedin.svg';
 const Integrantes = () => {
     return (
         <div id="integrantes" className="p-6 flex flex-col items-center justify-center mt-20 mx-auto gap-6">
+            
             <h1 className="text-4xl md:text-6xl font-bold text-black text-center"><span className="text-primario">Conocé</span> a nuestros <span className="text-primario">integrantes</span></h1>
 
             <div className="h-1 w-30 bg-gradient-to-r from-primario to-secundario rounded-xl"></div>

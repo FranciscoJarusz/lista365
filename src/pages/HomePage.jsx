@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import QuienesSomos from '../components/Quienes-somos';
 import Integrantes from '../components/Integrantes';
 import Recursos from '../components/Recursos';
+import Voluntariado from '../components/Voluntariado';
 import PreguntasFrecuentes from '../components/Preguntas-frecuentes';
 import Footer from '../components/Footer';
 
@@ -16,6 +17,7 @@ const HomePage = () => {
         <QuienesSomos />
         <Integrantes />
         <Recursos />
+        <Voluntariado />
         <PreguntasFrecuentes />
       </main>
 
