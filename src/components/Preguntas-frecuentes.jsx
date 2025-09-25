@@ -4,7 +4,14 @@ const PreguntasFrecuentes = () => {
     return (
         <div id="preguntas-frecuentes" className="p-6 flex flex-col items-center justify-center mt-20">
             
-            <h1 className="text-4xl md:text-6xl font-bold text-black mb-8 md:mb-12 text-center"><span className="text-primario">Preguntas</span> frecuentes</h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-black mb-8 md:mb-12 text-center flex items-center justify-center gap-8">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 512 512" fill="var(--color-primario)">
+                    <path d="M176 0c-26.5 0-48 21.5-48 48l0 208c0 26.5 21.5 48 48 48l64 0c26.5 0 48-21.5 48-48l0-64 32 0c70.7 0 128 57.3 128 128S390.7 448 320 448L32 448c-17.7 0-32 14.3-32 32s14.3 32 32 32l448 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-16.9 0c30.4-34 48.9-78.8 48.9-128 0-106-86-192-192-192l-32 0 0-80c0-26.5-21.5-48-48-48L176 0zM120 352c-13.3 0-24 10.7-24 24s10.7 24 24 24l176 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-176 0z"/>
+                </svg>
+                <span><span className="text-primario">Preguntas</span> frecuentes</span>
+
+            </h1>
             
             <div className="flex flex-col items-center justify-center max-w-9xl gap-4 md:gap-6 px-4 md:px-0">
                 
