@@ -46,9 +46,9 @@ const Integrantes = () => {
 
             <div className="flex items-center justify-center gap-6 md:gap-12 flex-col lg:flex-row px-4 md:px-0">
 
-                <p className="bg-gray-50 p-4 md:p-6 shadow-lg rounded-xl border-bottom-gradiente text-base md:text-lg text-black text-wrap max-w-2xl text-center w-full lg:w-auto">Vanesa Pierdomenico</p>
-                <p className="bg-gray-50 p-4 md:p-6 shadow-lg rounded-xl border-bottom-gradiente text-base md:text-lg text-black text-wrap max-w-2xl text-center w-full lg:w-auto">Mateo Bugliolo</p>
-                <p className="bg-gray-50 p-4 md:p-6 shadow-lg rounded-xl border-bottom-gradiente text-base md:text-lg text-black text-wrap max-w-2xl text-center w-full lg:w-auto">Damian Maldonado</p>
+                <p className="bg-gray-50 p-4 md:p-6 shadow-lg rounded-xl text-base md:text-lg text-black text-wrap max-w-2xl text-center w-full lg:w-auto border-b-4 border-primario">Vanesa Pierdomenico</p>
+                <p className="bg-gray-50 p-4 md:p-6 shadow-lg rounded-xl text-base md:text-lg text-black text-wrap max-w-2xl text-center w-full lg:w-auto border-b-4 border-primario">Mateo Bugliolo</p>
+                <p className="bg-gray-50 p-4 md:p-6 shadow-lg rounded-xl text-base md:text-lg text-black text-wrap max-w-2xl text-center w-full lg:w-auto border-b-4 border-primario">Damian Maldonado</p>
 
             </div>
 

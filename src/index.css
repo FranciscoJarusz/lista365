@@ -40,21 +40,6 @@ html {
   width: 100%;
 }
 
-.border-bottom-gradiente {
-  position: relative;
-}
-
-.border-bottom-gradiente::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(to right, var(--color-primario), var(--color-secundario));
-  border-radius: 0 0 0.75rem 0.75rem;
-}
-
 .deslizar-abajo .deslizar-abajo-content {
   max-height: 0;
   overflow: hidden;
