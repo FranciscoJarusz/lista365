@@ -7,7 +7,7 @@ const Integrantes = () => {
             
             <h1 className="text-4xl md:text-6xl font-bold text-black text-center"><span className="text-primario">Conocé</span> a nuestros <span className="text-primario">integrantes</span></h1>
 
-            <div className="h-1 w-30 bg-gradient-to-r from-primario to-secundario rounded-xl"></div>
+            <div className="h-1 w-20 lg:w-30 bg-gradient-to-r from-primario to-secundario rounded-xl"></div>
 
             <h2 className="text-2xl md:text-3xl font-bold text-primario mb-6 text-center">Comisión Directiva</h2>
 
