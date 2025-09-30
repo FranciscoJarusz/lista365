@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Calendar from './Calendario';
 
 const Voluntariado = () => {
-    const [currentMonth, setCurrentMonth] = useState(9);
+    const [currentDate, setCurrentDate] = useState({ month: 9, year: 2025 });
 
     return (
         <div id="voluntariado" className="p-6 flex flex-col items-center justify-center mt-20 gap-6">
@@ -21,10 +21,10 @@ const Voluntariado = () => {
             <div className="flex flex-col items-center justify-center gap-10 -mt-10 w-full px-6">
 
                 <div className="max-w-6xl">
-                    <Calendar onMonthChange={setCurrentMonth} />
+                    <Calendar onMonthChange={setCurrentDate} />
                 </div>
 
-                {currentMonth === 9 && (
+                {currentDate.month === 9 && currentDate.year === 2025 && (
                     <div className="flex flex-col items-center justify-center gap-10 max-w-4xl">
 
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 md:gap-12 w-full max-w-4xl px-4">
@@ -49,7 +49,7 @@ const Voluntariado = () => {
                     
                     </div>
                 )}
-                {currentMonth === 10 && (
+                {currentDate.month === 10 && currentDate.year === 2025 && (
                     <div className="flex flex-col items-center justify-center gap-6 max-w-4xl">
 
                         <div className="flex flex-col items-center justify-center gap-6 w-full max-w-4xl px-4">

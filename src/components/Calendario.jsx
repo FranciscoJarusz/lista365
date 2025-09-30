@@ -49,8 +49,9 @@ export default function Calendar({ onMonthChange }) {
 
   const handleDatesSet = (dateInfo) => {
     const month = dateInfo.view.currentStart.getMonth() + 1
+    const year = dateInfo.view.currentStart.getFullYear()
     if (onMonthChange) {
-      onMonthChange(month)
+      onMonthChange({ month, year })
     }
   }
 
