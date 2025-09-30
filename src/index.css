@@ -76,7 +76,6 @@ html {
 
 .gradiente-boton:hover {
   background-position: 100% 100%;
-  transform: scale(1.05);
 }
 
 .gradiente-boton-white {
@@ -89,5 +88,4 @@ html {
 
 .gradiente-boton-white:hover {
   background-position: 100% 100%;
-  transform: scale(1.05);
 }
