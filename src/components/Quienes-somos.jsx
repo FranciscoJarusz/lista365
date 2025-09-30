@@ -4,7 +4,7 @@ const QuienesSomos = () => {
     return (
         <div id="nosotros" className="p-6 flex flex-col items-center justify-center mt-40">
             
-            <h1 className="text-4xl md:text-6xl font-bold text-black mb-12"><span className="text-primario">¿</span>Quiénes somos<span className="text-primario">?</span></h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-black mb-6"><span className="text-primario">¿</span>Quiénes somos<span className="text-primario">?</span></h1>
             
             <div className="p-6 flex flex-col items-center justify-center max-w-3xl mx-auto gap-12">
                 

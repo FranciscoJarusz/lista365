@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import logo from '../assets/logo365.png';
+import ambulance from '../assets/ambulance.svg';
+import { useEfectosScroll } from '../hooks/useScrollEffects';
 
 const Header = ({showNav = true }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { progresoScroll, haScrolleado } = useEfectosScroll();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -14,12 +17,34 @@ const Header = ({showNav = true }) => {
 
   return (
     <>
-      <header className="bg-white shadow-lg fixed top-0 left-0 right-0 z-999">
+      <div className="fixed top-2 left-0 right-0 h-1 bg-gray-200 z-[1000]">
+        <div 
+          className="h-full bg-gradient-to-r from-primario to-secundario transition-all duration-100 ease-out relative"
+          style={{ width: `${progresoScroll}%` }}
+        >
+          <div 
+            className="absolute top-0 right-0 transform transition-all duration-100 ease-out flex items-center justify-center"
+            style={{ transform: `translateY(-50%) translateX(50%)` }}
+          >
+            <img 
+              src={ambulance} 
+              alt="Ambulancia" 
+              width="20" 
+              height="20" 
+              className="ml-10 drop-shadow-lg"
+            />
+          </div>
+        </div>
+      </div>
+      
+      <header className={`bg-white shadow-lg fixed top-3 left-0 right-0 z-999 transition-all duration-300 ${
+        haScrolleado ? 'shadow-xl' : 'shadow-lg'
+      }`}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex justify-between items-center py-3">
             <div>
               <a href="/">
-                <img src={logo} alt="Logo Centro de Estudiantes – Lista 365" className="h-20 w-20 object-contain hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer"/>
+                <img src={logo} alt="Logo Centro de Estudiantes – Lista 365" className="h-20 w-auto object-contain hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer"/>
               </a>
             </div>
 
