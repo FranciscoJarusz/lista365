@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Calendar from './Calendario';
 
 const Voluntariado = () => {
+    const [currentMonth, setCurrentMonth] = useState(9);
+
     return (
         <div id="voluntariado" className="p-6 flex flex-col items-center justify-center mt-20 gap-6">
 
@@ -14,6 +17,72 @@ const Voluntariado = () => {
             <div className="h-1 w-20 lg:w-30 bg-gradient-to-r from-primario to-secundario rounded-xl"></div>
 
             <p className="text-md text-gray-600 mb-12 text-center">Conocé nuestras actividades de voluntariado.</p> 
+
+            <div className="flex flex-col items-center justify-center gap-10 -mt-10 w-full px-6">
+
+                <div className="max-w-6xl">
+                    <Calendar onMonthChange={setCurrentMonth} />
+                </div>
+
+                {currentMonth === 9 && (
+                    <div className="flex flex-col items-center justify-center gap-10 max-w-4xl">
+
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 md:gap-12 w-full max-w-4xl px-4">
+
+                            <p className='bg-[#10B981] px-4 sm:px-6 py-3 sm:py-4 rounded-full text-white text-sm md:text-lg font-bold text-center w-full sm:w-auto'>Con APS (14:00 a 16:00hs.)</p>
+                            <p className='bg-[#fca704] px-4 sm:px-6 py-3 sm:py-4 rounded-full text-white text-sm md:text-lg font-bold text-center w-full sm:w-auto'>365 (14:00 a 16:00hs.)</p>
+
+                        </div>
+
+                        <div className="w-full max-w-6xl bg-gray-100 p-6 rounded-xl mx-4 shadow-lg">
+
+                            <p className="flex flex-col gap-2 text-left text-sm sm:text-md text-gray-600">
+                                <span className='block text-[#10B981]'>08-09: <span className="font-bold">Barrio Cielos del Sur (Cefenno Namuncura y De los Inmigrantes)</span></span>
+                                <span className='block text-[#fca704]'>12-09: <span className="font-bold">Plaza Principal (Av. Soarez y Moreno)</span></span>
+                                <span className='block text-[#fca704]'>15-09: <span className="font-bold">Barrio Gral. San Martín (Ex Fonavi, Faverio 170)</span></span>
+                                <span className='block text-[#10B981]'>22-09: <span className="font-bold">Barrio Los Arces (Gregorio Molina y Paunero)</span></span>
+                                <span className='block text-[#fca704]'>26-09: <span className="font-bold">Plaza Belgrano (Miguel Calderon y Brandsen)</span></span>
+                                <span className='block text-[#10B981]'>29-09: <span className="font-bold">Barrio 25 de Mayo (Francisco Ramirez y Juana Manso)</span></span>
+                            </p>
+
+                        </div>
+                    
+                    </div>
+                )}
+                {currentMonth === 10 && (
+                    <div className="flex flex-col items-center justify-center gap-6 max-w-4xl">
+
+                        <div className="flex flex-col items-center justify-center gap-6 w-full max-w-4xl px-4">
+
+                            <p className='bg-[#05681e] px-4 sm:px-6 py-3 sm:py-4 rounded-full text-white text-sm md:text-lg font-bold text-center w-full sm:w-auto'>Servicios (14:00 a 16:00hs.)</p>
+                            
+                            <div className="h-1 w-20 lg:w-30 bg-gradient-to-r from-[#05681e] to-[#236634] rounded-xl"></div>
+                            
+                            <div className='text-gray-600 flex flex-col items-center justify-center'>
+                                <p className=''>Admisión y gestiones</p>
+                                <p className=''>Medicina Clínica</p>
+                                <p className=''>Odontología</p>
+                                <p className=''>Enfermería</p>
+                                <p className=''>Trabajo Social</p>
+                            </div>
+
+                        </div>
+
+                        <div className="w-full max-w-6xl bg-gray-100 p-6 rounded-xl mx-4 shadow-lg">
+
+                            <p className="flex flex-col gap-2 text-left text-sm sm:text-md text-gray-600">
+                                <span className='block text-[#05681e]'>06-10: <span className="font-bold">Barrios Cielos del Sur (frente al SUM)</span></span>
+                                <span className='block text-[#05681e]'>13-10: <span className="font-bold">Barrio Gral. San Martín (ex Fonavi) (frente al CIC)</span></span>
+                                <span className='block text-[#05681e]'>20-10: <span className="font-bold">Barrio Los Arces (frente al SUM)</span></span>
+                                <span className='block text-[#05681e]'>22-09: <span className="font-bold">Barrio 25 de Mayo (frente al SUM)</span></span>
+                            </p>
+
+                        </div>
+                    
+                    </div>
+                )}
+                
+            </div>
 
         </div>
     );

@@ -1,0 +1,259 @@
+/* Estilos personalizados para FullCalendar */
+.calendar-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Estilos del calendario principal */
+.fc {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  min-height: 600px;
+}
+
+/* Header del calendario */
+.fc-header-toolbar {
+  background: linear-gradient(135deg, #fd4c0b 0%, #ff8860 100%);
+  color: white;
+  padding: 1rem;
+  margin: 0;
+  margin-bottom: 0 !important;
+}
+
+.fc-toolbar-title {
+  color: white !important;
+  font-size: 1.5rem !important;
+  font-weight: 600;
+}
+
+/* Botones del header - Separados */
+.fc-button {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  color: white !important;
+  border-radius: 8px !important;
+  padding: 0.5rem 1rem !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  margin: 0 0.25rem !important;
+}
+
+.fc-button:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
+.fc-button:focus {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3) !important;
+}
+
+.fc-button-active {
+  background: rgba(255, 255, 255, 0.4) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Separación específica para botones prev/next */
+.fc-toolbar-chunk:first-child .fc-button {
+  margin-right: 0.5rem !important;
+}
+
+.fc-toolbar-chunk:last-child .fc-button {
+  margin-left: 0.5rem !important;
+}
+
+/* Días de la semana */
+.fc-col-header-cell {
+  background: #f8fafc;
+  color: #000000;
+  font-weight: 600;
+  padding: 0.75rem 0;
+  border-color: #e5e7eb;
+}
+
+/* Celdas del calendario */
+.fc-daygrid-day {
+  border-color: #e5e7eb;
+  transition: background-color 0.2s ease;
+  min-height: 120px;
+}
+
+.fc-daygrid-day-number {
+  color: #000000ab;
+  font-weight: 500;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+/* Día actual */
+.fc-day-today {
+  background-color: #ff764921 !important;
+}
+
+.fc-day-today .fc-daygrid-day-number {
+  color: var(--color-primario);
+  font-weight: 700;
+}
+
+/* Eventos */
+.fc-event {
+  border-radius: 6px !important;
+  border: none !important;
+  padding: 0.25rem 0.5rem !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  margin: 1px !important;
+}
+
+/* Responsive para tablets */
+@media (max-width: 1024px) {
+  .calendar-container {
+    max-width: 100%;
+    padding: 0.75rem;
+  }
+
+  .fc {
+    min-height: 500px;
+  }
+
+  .fc-toolbar-title {
+    font-size: 1.35rem;
+  }
+
+  .fc-daygrid-day {
+    min-height: 100px;
+  }
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .calendar-container {
+    padding: 0.5rem;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .fc {
+    min-height: auto;
+    border-radius: 8px;
+    min-width: 100%;
+    width: 100%;
+  }
+
+  .fc-daygrid-body {
+    width: 100% !important;
+  }
+
+  .fc-scrollgrid {
+    width: 100% !important;
+  }
+  
+  .fc-header-toolbar {
+    padding: 0.75rem 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .fc-toolbar-title {
+    font-size: 1.1rem;
+    order: 2;
+    width: 100%;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+
+  .fc-toolbar-chunk:first-child {
+    order: 1;
+  }
+
+  .fc-toolbar-chunk:last-child {
+    order: 3;
+  }
+  
+  .fc-button {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.875rem !important;
+  }
+  
+  .fc-col-header-cell {
+    padding: 0.5rem 0;
+    font-size: 0.75rem;
+  }
+
+  .fc-daygrid-day {
+    min-height: 80px;
+  }
+  
+  .fc-daygrid-day-number {
+    padding: 0.25rem;
+    font-size: 0.875rem;
+  }
+  
+  .fc-event {
+    font-size: 0.7rem !important;
+    padding: 0.2rem 0.4rem !important;
+    margin: 1px 0 !important;
+  }
+}
+
+/* Responsive para móviles pequeños */
+@media (max-width: 480px) {
+  .calendar-container {
+    padding: 0.25rem;
+  }
+
+  .fc {
+    border-radius: 6px;
+  }
+
+  .fc-header-toolbar {
+    padding: 0.5rem 0.25rem;
+  }
+
+  .fc-toolbar-title {
+    font-size: 1rem !important;
+  }
+
+  .fc-button {
+    padding: 0.4rem 0.6rem !important;
+    font-size: 0.75rem !important;
+  }
+
+  .fc-col-header-cell {
+    padding: 0.35rem 0;
+    font-size: 0.65rem;
+  }
+
+  .fc-daygrid-day {
+    min-height: 60px;
+  }
+
+  .fc-daygrid-day-number {
+    padding: 0.15rem;
+    font-size: 0.75rem;
+  }
+
+  .fc-event {
+    font-size: 0.6rem !important;
+    padding: 0.15rem 0.3rem !important;
+    border-radius: 4px !important;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fc {
+  animation: fadeIn 0.5s ease-out;
+}
