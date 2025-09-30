@@ -17,6 +17,7 @@ const Header = ({showNav = true }) => {
 
   return (
     <>
+      <div className="fixed top-0 left-0 right-0 h-8 bg-white z-[998]"></div>
       <div className="fixed top-2 left-0 right-0 h-1 bg-gray-200 z-[1000]">
         <div 
           className="h-full bg-gradient-to-r from-primario to-secundario transition-all duration-100 ease-out relative"
