@@ -1,13 +1,20 @@
-import React, { useState } from 'react';
-import Calendar from './Calendario';
+import React, { useState, useEffect } from 'react';
+import Calendar, { allEvents } from './Calendario';
 import voluntariado1 from '../assets/voluntariado_1.jpg';
 import voluntariado2 from '../assets/voluntariado_2.jpg';
 
 const Voluntariado = () => {
     const [currentDate, setCurrentDate] = useState({ month: 9, year: 2025 });
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [todayEvent, setTodayEvent] = useState(null);
 
     const images = [voluntariado1, voluntariado2];
+
+    useEffect(() => {
+        const today = new Date().toISOString().split('T')[0];
+        const eventToday = allEvents.find(event => event.date === today);
+        setTodayEvent(eventToday);
+    }, []);
 
     const nextSlide = () => {
         setCurrentSlide((prev) => (prev + 1) % images.length);
@@ -22,7 +29,66 @@ const Voluntariado = () => {
     };
 
     return (
-        <div id="voluntariado" className="p-6 flex flex-col items-center justify-center mt-20 gap-6">
+        <>
+            {todayEvent && (
+                <div 
+                    className="fixed inset-0 bg-black/60 z-[1002] flex items-center justify-center p-4"
+                    onClick={() => setTodayEvent(null)}
+                >
+                    <div 
+                        className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <div 
+                            className="w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center"
+                            style={{ backgroundColor: todayEvent.color }}
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                            </svg>
+                        </div>
+
+                        <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-3">
+                            ¡Evento de Hoy!
+                        </h2>
+
+                        <p className="text-center text-gray-600 mb-6">
+                            Hoy tenemos <span className="font-bold" style={{ color: todayEvent.color }}>{todayEvent.title}</span> programado de <strong>14:00 a 16:00hs</strong>. ¡No te lo pierdas!
+                        </p>
+
+                        <div className="flex flex-col sm:flex-row gap-3">
+                            <button
+                                onClick={() => setTodayEvent(null)}
+                                className="cursor-pointer flex-1 px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                            >
+                                Ahora no
+                            </button>
+                            <button
+                                onClick={() => {
+                                    setTodayEvent(null);
+                                    document.querySelector('.calendar-container')?.scrollIntoView({ behavior: 'smooth' });
+                                }}
+                                className="cursor-pointer flex-1 px-6 py-3 text-white rounded-lg font-semibold transition-all hover:shadow-xl"
+                                style={{ backgroundColor: todayEvent.color }}
+                            >
+                                Ver detalles
+                            </button>
+                        </div>
+
+                        <button
+                            onClick={() => setTodayEvent(null)}
+                            className="cursor-pointer absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+                            aria-label="Cerrar"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            )}
+
+            <div id="voluntariado" className="p-6 flex flex-col items-center justify-center mt-20 gap-6">
 
             <h1 className="text-4xl md:text-6xl font-bold text-black flex sm:flex-row flex-col items-center gap-4 md:gap-8">
             <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 640 640" fill="var(--color-primario)">
@@ -178,6 +244,7 @@ const Voluntariado = () => {
             </div>
 
         </div>
+        </>
     );
 };
 
