@@ -1,8 +1,25 @@
 import React, { useState } from 'react';
 import Calendar from './Calendario';
+import voluntariado1 from '../assets/voluntariado_1.jpg';
+import voluntariado2 from '../assets/voluntariado_2.jpg';
 
 const Voluntariado = () => {
     const [currentDate, setCurrentDate] = useState({ month: 9, year: 2025 });
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const images = [voluntariado1, voluntariado2];
+
+    const nextSlide = () => {
+        setCurrentSlide((prev) => (prev + 1) % images.length);
+    };
+
+    const prevSlide = () => {
+        setCurrentSlide((prev) => (prev - 1 + images.length) % images.length);
+    };
+
+    const goToSlide = (index) => {
+        setCurrentSlide(index);
+    };
 
     return (
         <div id="voluntariado" className="p-6 flex flex-col items-center justify-center mt-20 gap-6">
@@ -16,9 +33,72 @@ const Voluntariado = () => {
 
             <div className="h-1 w-20 lg:w-30 bg-gradient-to-r from-primario to-secundario rounded-xl"></div>
 
-            <p className="text-md text-gray-600 mb-12 text-center">Conocé nuestras actividades de voluntariado.</p> 
+            <p className="text-md text-gray-600 text-center">Conocé mas acerca del voluntariado.</p>
 
-            <div className="flex flex-col items-center justify-center gap-10 -mt-10 w-full px-6">
+            <p className="text-sm md:text-md bg-gray-50 p-6 rounded-xl mb-8 text-left max-w-3xl text-gray-600 text-wrap shadow-lg">
+                La salud comunitaria constituye un pilar fundamental en el marco de la Atención Primaria de la Salud (APS), ya que permite garantizar el derecho a la salud a través de estrategias preventivas, promocionales y participativas. En este sentido, la implementación de Postas de Salud Comunitaria se presenta como una herramienta clave para acercar los servicios sanitarios a la población, generando espacios de diálogo, control y acompañamiento.
+                Las postas se proponen como un dispositivo de intervención territorial que posibilita la realización de controles básicos de signos vitales (presión arterial, frecuencia cardíaca, frecuencia respiratoria y temperatura) y, a su vez, fomenta la promoción de hábitos saludables orientados a la prevención de enfermedades no transmisibles, como la hipertensión arterial, la diabetes, la obesidad y las enfermedades cardiovasculares.
+                Este proyecto se desarrollará en articulación con la Dirección de Atención Primaria de la Salud de Chivilcoy, mediante la integración de estudiantes voluntarios de la carrera de Enfermería. A través de esta experiencia, se busca fortalecer el vínculo entre la comunidad y el sistema de salud, al mismo tiempo que se ofrece a los estudiantes un espacio formativo de gran valor para el desarrollo de competencias en el campo comunitario.
+            </p>
+
+            <div className="relative w-full max-w-xl mx-auto group mb-8">
+                <div className="relative overflow-hidden rounded-lg shadow-lg h-160">
+                    <div 
+                        className="flex transition-transform duration-500 ease-out h-full"
+                        style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                    >
+                        {images.map((image, index) => (
+                            <img 
+                                key={index}
+                                src={image} 
+                                alt={`Voluntariado ${index + 1}`} 
+                                className="w-full h-full object-cover flex-shrink-0"
+                            />
+                        ))}
+                    </div>
+                </div>
+
+                <button
+                    onClick={prevSlide}
+                    className="cursor-pointer absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-primario p-2 rounded-full shadow-md transition-all duration-300 opacity-0 group-hover:opacity-100"
+                    aria-label="Imagen anterior"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+
+                <button
+                    onClick={nextSlide}
+                    className="cursor-pointer absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-primario p-2 rounded-full shadow-md transition-all duration-300 opacity-0 group-hover:opacity-100"
+                    aria-label="Imagen siguiente"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+                    {images.map((_, index) => (
+                        <button
+                            key={index}
+                            onClick={() => goToSlide(index)}
+                            className={`cursor-pointer w-2 h-2 rounded-full transition-all duration-300 ${
+                                currentSlide === index 
+                                    ? 'bg-primario w-6' 
+                                    : 'bg-white/60 hover:bg-white/80'
+                            }`}
+                            aria-label={`Ir a imagen ${index + 1}`}
+                        />
+                    ))}
+                </div>
+            </div>
+            
+            <p className="text-md text-gray-600 text-center">Conocé las fechas y horarios de las postas de salud comunitaria.</p>
+
+            <div className="h-1 w-20 lg:w-30 bg-gradient-to-r from-primario to-secundario rounded-xl"></div>
+
+            <div className="flex flex-col items-center justify-center gap-10 w-full px-6">
 
                 <div className="max-w-6xl">
                     <Calendar onMonthChange={setCurrentDate} />
