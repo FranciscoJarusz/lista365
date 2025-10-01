@@ -45,7 +45,7 @@ const Header = ({showNav = true }) => {
           <div className="flex justify-between items-center py-3">
             <div>
               <a href="/">
-                <img src={logo} alt="Logo Centro de Estudiantes – Lista 365" className="h-20 w-auto object-contain hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer"/>
+                <img src={logo} alt="Logo Centro de Estudiantes – Lista 365" className="h-20 w-auto object-contain hover:scale-104 transition-all duration-300 ease-in-out cursor-pointer"/>
               </a>
             </div>
 
