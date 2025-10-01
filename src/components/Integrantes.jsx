@@ -1,5 +1,4 @@
 import React from 'react';
-import linkedinIcon from '../assets/linkedin.svg';
 
 const Integrantes = () => {
     return (
@@ -13,31 +12,19 @@ const Integrantes = () => {
 
             <div className="flex items-center justify-center gap-12 flex-col lg:flex-row">
                 
-                <div className="flex flex-col items-center justify-center gap-4 bg-gray-50 py-4 md:py-6 px-6 md:px-12 rounded-xl shadow-lg">
+                <div className="flex flex-col items-center justify-center gap-4 bg-gray-50 py-4 md:py-6 px-6 md:px-12 rounded-xl shadow-lg w-full lg:w-auto border-b-4 border-primario">
                     <h3 className="text-lg md:text-2xl font-medium text-black text-center text-nowrap">Jesús Ressia</h3>
                     <p className="text-base md:text-lg text-primario font-bold max-w-2xl text-center">Presidente</p>
-                     <a href="/" target="_blank" className="flex items-center gap-4 gradiente-boton rounded-full px-6 py-2 text-sm md:text-lg text-white w-40">
-                         <img src={linkedinIcon} alt="LinkedIn" className="w-6 h-6"/>
-                          <span>LinkedIn</span>
-                      </a>
                 </div>
 
-                <div className="flex flex-col items-center justify-center gap-4 bg-gray-50 py-4 md:py-6 px-6 md:px-12 rounded-xl shadow-lg">
+                <div className="flex flex-col items-center justify-center gap-4 bg-gray-50 py-4 md:py-6 px-6 md:px-12 rounded-xl shadow-lg w-full lg:w-auto border-b-4 border-primario">
                     <h3 className="text-lg md:text-2xl font-medium text-black text-center text-nowrap">Mateo Schenone</h3>
                     <p className="text-base md:text-lg text-primario font-bold max-w-2xl text-center">Vice Presidente</p>
-                     <a href="/" target="_blank" className="flex items-center gap-4 gradiente-boton rounded-full px-6 py-2 text-sm md:text-lg text-white w-40">
-                         <img src={linkedinIcon} alt="LinkedIn" className="w-6 h-6"/>
-                          <span>LinkedIn</span>
-                      </a>
                 </div>
 
-                <div className="flex flex-col items-center justify-center gap-4 bg-gray-50 py-4 md:py-6 px-6 md:px-12 rounded-xl shadow-lg">
+                <div className="flex flex-col items-center justify-center gap-4 bg-gray-50 py-4 md:py-6 px-6 md:px-12 rounded-xl shadow-lg w-full lg:w-auto border-b-4 border-primario">
                     <h3 className="text-lg md:text-2xl font-medium text-black text-center text-nowrap">Fátima Cirulli</h3>
                     <p className="text-base md:text-lg text-primario font-bold max-w-2xl text-center">Secretaria general</p>
-                     <a href="/" target="_blank" className="flex items-center gap-4 gradiente-boton rounded-full px-6 py-2 text-sm md:text-lg text-white w-40">
-                         <img src={linkedinIcon} alt="LinkedIn" className="w-6 h-6"/>
-                          <span>LinkedIn</span>
-                      </a>
                 </div>
 
             </div>
