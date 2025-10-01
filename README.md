@@ -118,7 +118,7 @@ Muestra el equipo del Centro de Estudiantes
 Recursos y materiales para estudiantes
 
 ### 6. **Voluntariado** (`Voluntariado.jsx`)
-Información sobre oportunidades de voluntariado
+Información sobre información del voluntariado
 
 ### 7. **PreguntasFrecuentes** (`Preguntas-frecuentes.jsx`)
 Sistema de FAQ (Preguntas Frecuentes)
