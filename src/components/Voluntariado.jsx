@@ -161,6 +161,19 @@ const Voluntariado = () => {
                     
                     </div>
                 )}
+
+                {!(currentDate.month === 9 && currentDate.year === 2025) && 
+                 !(currentDate.month === 10 && currentDate.year === 2025) && (
+                    <div className="flex flex-col items-center justify-center gap-4 max-w-4xl py-8 -mt-10">
+                        <div className="text-gray-600 text-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            <p className="text-lg md:text-xl font-semibold text-gray-500">Por el momento no hay actividades programadas</p>
+                            <p className="text-sm text-gray-600 mt-2">Navegá por el calendario para ver otros meses</p>
+                        </div>
+                    </div>
+                )}
                 
             </div>
 
