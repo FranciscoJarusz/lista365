@@ -89,3 +89,12 @@ html {
 .gradiente-boton-white:hover {
   background-position: 100% 100%;
 }
+
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--color-primario) transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
