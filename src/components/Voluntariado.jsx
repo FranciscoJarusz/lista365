@@ -154,7 +154,7 @@ const Voluntariado = () => {
                                 <span className='block text-[#05681e]'>06-10: <span className="font-bold">Barrios Cielos del Sur (frente al SUM)</span></span>
                                 <span className='block text-[#05681e]'>13-10: <span className="font-bold">Barrio Gral. San Martín (ex Fonavi) (frente al CIC)</span></span>
                                 <span className='block text-[#05681e]'>20-10: <span className="font-bold">Barrio Los Arces (frente al SUM)</span></span>
-                                <span className='block text-[#05681e]'>22-09: <span className="font-bold">Barrio 25 de Mayo (frente al SUM)</span></span>
+                                <span className='block text-[#05681e]'>22-10: <span className="font-bold">Barrio 25 de Mayo (frente al SUM)</span></span>
                             </p>
 
                         </div>
