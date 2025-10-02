@@ -1,0 +1,112 @@
+[
+  {
+    "id": "con-aps-1",
+    "title": "Con APS",
+    "date": "2025-09-01",
+    "type": "con-aps",
+    "location": "Barrio Cielos del Sur (Cefenno Namuncura y De los Inmigrantes)",
+    "time": "14:00 a 16:00hs",
+    "backgroundColor": "#10B981",
+    "textColor": "#ffffff",
+    "color": "#10B981"
+  },
+  {
+    "id": "con-aps-2",
+    "title": "Con APS",
+    "date": "2025-09-08",
+    "type": "con-aps",
+    "location": "Barrio Gral. San Martín (Ex Fonavi, Faverio 170)",
+    "time": "14:00 a 16:00hs",
+    "backgroundColor": "#10B981",
+    "textColor": "#ffffff",
+    "color": "#10B981"
+  },
+  {
+    "id": "con-aps-3",
+    "title": "Con APS",
+    "date": "2025-09-15",
+    "type": "con-aps",
+    "location": "Barrio Gral. San Martín (Ex Fonavi, Faverio 170)",
+    "time": "14:00 a 16:00hs",
+    "backgroundColor": "#10B981",
+    "textColor": "#ffffff",
+    "color": "#10B981"
+  },
+  {
+    "id": "con-aps-4",
+    "title": "Con APS",
+    "date": "2025-09-22",
+    "type": "con-aps",
+    "location": "Barrio Los Arces (Gregorio Molina y Paunero)",
+    "time": "14:00 a 16:00hs",
+    "backgroundColor": "#10B981",
+    "textColor": "#ffffff",
+    "color": "#10B981"
+  },
+  {
+    "id": "event-365-1",
+    "title": "365",
+    "date": "2025-09-12",
+    "type": "365",
+    "location": "Plaza Principal (Av. Soarez y Moreno)",
+    "time": "14:00 a 16:00hs",
+    "backgroundColor": "#fca704",
+    "textColor": "#ffffff",
+    "color": "#fca704"
+  },
+  {
+    "id": "event-365-2",
+    "title": "365",
+    "date": "2025-09-26",
+    "type": "365",
+    "location": "Plaza Belgrano (Miguel Calderon y Brandsen)",
+    "time": "14:00 a 16:00hs",
+    "backgroundColor": "#fca704",
+    "textColor": "#ffffff",
+    "color": "#fca704"
+  },
+  {
+    "id": "servicios-1",
+    "title": "Servicios",
+    "date": "2025-10-06",
+    "type": "servicios",
+    "location": "Barrios Cielos del Sur (frente al SUM)",
+    "time": "14:00 a 16:00hs",
+    "backgroundColor": "#05681e",
+    "textColor": "#ffffff",
+    "color": "#05681e"
+  },
+  {
+    "id": "servicios-2",
+    "title": "Servicios",
+    "date": "2025-10-13",
+    "type": "servicios",
+    "location": "Barrio Gral. San Martín (ex Fonavi) (frente al CIC)",
+    "time": "14:00 a 16:00hs",
+    "backgroundColor": "#05681e",
+    "textColor": "#ffffff",
+    "color": "#05681e"
+  },
+  {
+    "id": "servicios-3",
+    "title": "Servicios",
+    "date": "2025-10-20",
+    "type": "servicios",
+    "location": "Barrio Los Arces (frente al SUM)",
+    "time": "14:00 a 16:00hs",
+    "backgroundColor": "#05681e",
+    "textColor": "#ffffff",
+    "color": "#05681e"
+  },
+  {
+    "id": "servicios-4",
+    "title": "Servicios",
+    "date": "2025-10-27",
+    "type": "servicios",
+    "location": "Barrio 25 de Mayo (frente al SUM)",
+    "time": "14:00 a 16:00hs",
+    "backgroundColor": "#05681e",
+    "textColor": "#ffffff",
+    "color": "#05681e"
+  }
+]

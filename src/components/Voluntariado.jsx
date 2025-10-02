@@ -3,10 +3,20 @@ import Calendar, { allEvents } from './Calendario';
 import voluntariado1 from '../assets/voluntariado_1.jpg';
 import voluntariado2 from '../assets/voluntariado_2.jpg';
 
+// Obtenemos los eventos del mes actual
+const getEventsForMonth = (month, year) => {
+    return allEvents.filter(event => {
+        const eventDate = new Date(event.date);
+        return eventDate.getMonth() + 1 === month && eventDate.getFullYear() === year;
+    });
+};
+
+
 const Voluntariado = () => {
     const [currentDate, setCurrentDate] = useState({ month: 9, year: 2025 });
     const [currentSlide, setCurrentSlide] = useState(0);
     const [todayEvent, setTodayEvent] = useState(null);
+    const [monthEvents, setMonthEvents] = useState([]);
 
     const images = [voluntariado1, voluntariado2];
 
@@ -15,6 +25,11 @@ const Voluntariado = () => {
         const eventToday = allEvents.find(event => event.date === today);
         setTodayEvent(eventToday);
     }, []);
+
+    useEffect(() => {
+        const events = getEventsForMonth(currentDate.month, currentDate.year);
+        setMonthEvents(events);
+    }, [currentDate]);
 
     const nextSlide = () => {
         setCurrentSlide((prev) => (prev + 1) % images.length);
@@ -170,66 +185,54 @@ const Voluntariado = () => {
                     <Calendar onMonthChange={setCurrentDate} />
                 </div>
 
-                {currentDate.month === 9 && currentDate.year === 2025 && (
+                {monthEvents.length > 0 && (
                     <div className="flex flex-col items-center justify-center gap-10 max-w-4xl">
 
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 md:gap-12 w-full max-w-4xl px-4">
+                        {monthEvents.some(event => event.type === 'servicios') && (() => {
+                            const serviciosEvent = monthEvents.find(event => event.type === 'servicios');
+                            return (
+                                <div className="flex flex-col items-center justify-center gap-6 w-full max-w-4xl px-4">
+                                    <h2 className="text-2xl md:text-4xl font-bold text-center" style={{ color: serviciosEvent.color }}>
+                                        Servicios
+                                    </h2>
 
-                            <p className='bg-[#10B981] px-4 sm:px-6 py-3 sm:py-4 rounded-full text-white text-sm md:text-lg font-bold text-center w-full sm:w-auto'>Con APS (14:00 a 16:00hs.)</p>
-                            <p className='bg-[#fca704] px-4 sm:px-6 py-3 sm:py-4 rounded-full text-white text-sm md:text-lg font-bold text-center w-full sm:w-auto'>365 (14:00 a 16:00hs.)</p>
+                                    <div className="h-1 w-20 lg:w-30 rounded-xl" style={{ backgroundColor: serviciosEvent.color }}></div>
 
-                        </div>
+                                    <div className='text-gray-600 flex flex-col items-center justify-center'>
+                                        <p>Admisión y gestiones</p>
+                                        <p>Medicina Clínica</p>
+                                        <p>Odontología</p>
+                                        <p>Enfermería</p>
+                                        <p>Trabajo Social</p>
+                                    </div>
+                                </div>
+                            );
+                        })()}
 
                         <div className="w-full max-w-6xl bg-gray-100 p-6 rounded-xl mx-4 shadow-lg">
-
-                            <p className="flex flex-col gap-2 text-left text-sm sm:text-md text-gray-600">
-                                <span className='block text-[#10B981]'>08-09: <span className="font-bold">Barrio Cielos del Sur (Cefenno Namuncura y De los Inmigrantes)</span></span>
-                                <span className='block text-[#fca704]'>12-09: <span className="font-bold">Plaza Principal (Av. Soarez y Moreno)</span></span>
-                                <span className='block text-[#fca704]'>15-09: <span className="font-bold">Barrio Gral. San Martín (Ex Fonavi, Faverio 170)</span></span>
-                                <span className='block text-[#10B981]'>22-09: <span className="font-bold">Barrio Los Arces (Gregorio Molina y Paunero)</span></span>
-                                <span className='block text-[#fca704]'>26-09: <span className="font-bold">Plaza Belgrano (Miguel Calderon y Brandsen)</span></span>
-                                <span className='block text-[#10B981]'>29-09: <span className="font-bold">Barrio 25 de Mayo (Francisco Ramirez y Juana Manso)</span></span>
-                            </p>
-
-                        </div>
-                    
-                    </div>
-                )}
-                {currentDate.month === 10 && currentDate.year === 2025 && (
-                    <div className="flex flex-col items-center justify-center gap-6 max-w-4xl">
-
-                        <div className="flex flex-col items-center justify-center gap-6 w-full max-w-4xl px-4">
-
-                            <p className='bg-[#05681e] px-4 sm:px-6 py-3 sm:py-4 rounded-full text-white text-sm md:text-lg font-bold text-center w-full sm:w-auto'>Servicios (14:00 a 16:00hs.)</p>
-                            
-                            <div className="h-1 w-20 lg:w-30 bg-gradient-to-r from-[#05681e] to-[#236634] rounded-xl"></div>
-                            
-                            <div className='text-gray-600 flex flex-col items-center justify-center'>
-                                <p className=''>Admisión y gestiones</p>
-                                <p className=''>Medicina Clínica</p>
-                                <p className=''>Odontología</p>
-                                <p className=''>Enfermería</p>
-                                <p className=''>Trabajo Social</p>
+                            <div className="flex flex-col gap-2 text-left text-sm sm:text-md text-gray-600">
+                                {monthEvents
+                                    .sort((a, b) => new Date(a.date) - new Date(b.date))
+                                    .map(event => {
+                                        const eventDate = new Date(event.date);
+                                        const dayMonth = `${String(eventDate.getDate()).padStart(2, '0')}-${String(eventDate.getMonth() + 1).padStart(2, '0')}`;
+                                        
+                                        return (
+                                            <span 
+                                                key={event.id}
+                                                className='block'
+                                                style={{ color: event.color }}
+                                            >
+                                                {dayMonth}: <span className="font-bold">{event.title} - {event.location}</span> <span className="text-gray-500">({event.time})</span>
+                                            </span>
+                                        );
+                                    })}
                             </div>
-
                         </div>
-
-                        <div className="w-full max-w-6xl bg-gray-100 p-6 rounded-xl mx-4 shadow-lg">
-
-                            <p className="flex flex-col gap-2 text-left text-sm sm:text-md text-gray-600">
-                                <span className='block text-[#05681e]'>06-10: <span className="font-bold">Barrios Cielos del Sur (frente al SUM)</span></span>
-                                <span className='block text-[#05681e]'>13-10: <span className="font-bold">Barrio Gral. San Martín (ex Fonavi) (frente al CIC)</span></span>
-                                <span className='block text-[#05681e]'>20-10: <span className="font-bold">Barrio Los Arces (frente al SUM)</span></span>
-                                <span className='block text-[#05681e]'>22-10: <span className="font-bold">Barrio 25 de Mayo (frente al SUM)</span></span>
-                            </p>
-
-                        </div>
-                    
                     </div>
                 )}
 
-                {!(currentDate.month === 9 && currentDate.year === 2025) && 
-                 !(currentDate.month === 10 && currentDate.year === 2025) && (
+                {monthEvents.length === 0 && (
                     <div className="flex flex-col items-center justify-center gap-4 max-w-4xl py-8 -mt-10">
                         <div className="text-gray-600 text-center">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

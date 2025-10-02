@@ -1,59 +1,41 @@
 import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import '../Calendar.css'
+import eventsData from '../events.json'
 
-// Fechas para APS
-const conApsDates = [
-    '2025-09-01',
-    '2025-09-08', 
-    '2025-09-15',
-    '2025-09-22',
-]
+// Recibimos los eventos
+export const getAllEvents = () => {
+    return eventsData.map(event => ({
+        id: event.id,
+        title: event.title,
+        date: event.date,
+        type: event.type,
+        location: event.location,
+        time: event.time,
+        backgroundColor: event.backgroundColor,
+        textColor: event.textColor,
+        color: event.color
+    }))
+}
 
-const conApsEvents = conApsDates.map(date => ({
-    title: 'Con APS',
-    date: date,
-    backgroundColor: '#10B981',
-    textColor: '#ffffff',
-    color: '#10B981'
-}))
+// Separamos los eventos por tipo
+export const getEventsByType = (type) => {
+    return eventsData
+        .filter(event => event.type === type)
+        .map(event => ({
+            id: event.id,
+            title: event.title,
+            date: event.date,
+            type: event.type,
+            location: event.location,
+            time: event.time,
+            backgroundColor: event.backgroundColor,
+            textColor: event.textColor,
+            color: event.color
+        }))
+}
 
-// Fechas para 365
-const event365Dates = [
-    '2025-09-12',
-    '2025-09-26'
-]
-
-const event365Events = event365Dates.map(date => ({
-    title: '365',
-    date: date,
-    backgroundColor: '#fca704',
-    textColor: '#ffffff',
-    color: '#fca704'
-}))
-
-// Fechas para Servicios
-const serviciosDates = [
-    '2025-10-06',
-    '2025-10-13',
-    '2025-10-20',
-    '2025-10-27'
-]
-
-const serviciosEvents = serviciosDates.map(date => ({
-    title: 'Servicios',
-    date: date, 
-    backgroundColor: '#05681e',
-    textColor: '#ffffff',
-    color: '#05681e'
-}))
-
-// Exportar todos los eventos para usar en otros componentes
-export const allEvents = [
-    ...conApsEvents,
-    ...event365Events,
-    ...serviciosEvents
-]
+export const allEvents = getAllEvents()
 
 export default function Calendar({ onMonthChange }) {
 
